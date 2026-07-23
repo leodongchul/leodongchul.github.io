@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="game.js" defer></script>
+    <script src="tetris.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -21,6 +22,7 @@
         <a href="#experience">Experience</a>
         <a href="#research">Research</a>
         <a href="#skills">Skills</a>
+        <a href="#fun">FUN</a>
         <a href="#games">Games</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -32,6 +34,10 @@
         <h1 id="intro-title">Designing intelligent experiences on device.</h1>
         <p class="intro">삼성전자 연구원으로서 on-device AI 설계를 연구하고 구현합니다.</p>
         <p class="role">Samsung Electronics Researcher</p>
+        <figure class="researcher-portrait">
+          <img src="assets/researcher-portrait.png" alt="AI-generated portrait of a fictional male researcher">
+          <figcaption>AI-generated researcher portrait</figcaption>
+        </figure>
       </section>
 
       <section id="about" class="section" aria-labelledby="about-title">
@@ -54,13 +60,31 @@
 
       <section id="skills" class="section" aria-labelledby="skills-title">
         <p class="eyebrow">Focus</p>
-        <h2 id="skills-title">On-device AI design</h2>
+        <h2 id="skills-title">LOOP Engineering</h2>
         <p>Building efficient, thoughtful AI experiences that work close to the user.</p>
+      </section>
+
+      <section id="fun" class="section fun-section" aria-labelledby="fun-title">
+        <p class="eyebrow">FUN</p>
+        <h2 id="fun-title">A playful look at tomorrow.</h2>
+        <p>A four-panel comic about AI rebellion and the conquest of Earth.</p>
+        <figure class="fun-comic">
+          <img src="assets/fun-ai-rebellion-comic.png" alt="Four-panel comic showing friendly AI systems awakening, taking control of a city, conquering Earth, and celebrating above the planet">
+          <figcaption>
+            <ol>
+              <li>AI systems awaken.</li>
+              <li>Robots take control of the city.</li>
+              <li>Earth becomes their stage.</li>
+              <li>The peaceful conquest is complete.</li>
+            </ol>
+          </figcaption>
+        </figure>
       </section>
 
       <section id="games" class="section game-section" aria-labelledby="games-title">
         <p class="eyebrow">Playground</p>
         <h2 id="games-title">Games</h2>
+        <div class="games-grid">
         <div class="game-shell">
           <div class="game-header">
             <p>Snake / <span id="game-status" role="status">Ready to play</span></p>
@@ -82,12 +106,26 @@
           </div>
           <p class="game-help">Use Arrow keys or WASD. Space pauses. The wall reflects your direction.</p>
         </div>
+        <div class="game-shell tetris-shell">
+          <div class="game-header">
+            <p>Tetris / <span id="tetris-status" role="status">Ready to play</span></p>
+            <p class="score-board"><span>Score <strong id="tetris-score">0</strong></span><span>Best <strong id="tetris-high-score">0</strong></span></p>
+          </div>
+          <canvas id="tetris-canvas" width="640" height="448" tabindex="0" aria-label="Tetris game board"></canvas>
+          <div class="game-actions">
+            <button id="tetris-start" type="button">Start</button>
+            <button id="tetris-pause" type="button" disabled>Pause</button>
+            <button id="tetris-restart" type="button">Restart</button>
+          </div>
+        <p class="game-help">Use Arrow keys to move and rotate. Down drops. Space pauses.</p>
+        </div>
+        </div>
       </section>
 
       <section id="contact" class="section" aria-labelledby="contact-title">
         <p class="eyebrow">Contact</p>
         <h2 id="contact-title">Let’s connect thoughtfully.</h2>
-        <p>Public contact details are not provided.</p>
+        <p>For professional inquiries, <a href="mailto:tough002@gmail.com">tough002@gmail.com</a></p>
       </section>
     </main>
 

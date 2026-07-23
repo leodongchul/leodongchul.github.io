@@ -54,13 +54,21 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
 
 .section { border-top: 1px solid var(--border); padding: 5rem 0; }
 .section > p:last-child { max-width: 560px; font-size: 1.05rem; }
-.game-shell { margin-top: 2rem; max-width: 720px; padding: 1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); }
+.researcher-portrait { margin: 2rem 0 0; max-width: 360px; }
+.researcher-portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--border); border-radius: 1rem; }
+.researcher-portrait figcaption { margin-top: 0.75rem; color: var(--muted); font-size: 0.85rem; }
+.fun-comic { margin: 2rem 0 0; }
+.fun-comic img { display: block; width: 100%; border: 1px solid var(--border); border-radius: 1rem; }
+.fun-comic ol { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1rem 0 0; padding-left: 1.25rem; color: var(--muted); font-size: 0.85rem; }
+.fun-comic li { padding-left: 0.25rem; }
+.games-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.game-shell { min-width: 0; padding: 1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); }
 .game-header, .score-board, .game-actions { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .game-header p { margin: 0 0 1rem; color: var(--muted); }
 .score-board { justify-content: flex-end; margin: 0; }
 .score-board span { display: grid; gap: 0.1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .score-board strong { color: var(--accent); font-size: 1.1rem; letter-spacing: 0; }
-#snake-canvas { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 0.5rem; background: #0a0c10; image-rendering: pixelated; }
+#snake-canvas, #tetris-canvas { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 0.5rem; background: #0a0c10; image-rendering: pixelated; }
 .game-actions { justify-content: flex-start; margin-top: 1rem; }
 .game-actions button, .touch-controls button { border: 1px solid var(--border); border-radius: 0.5rem; background: #1c2330; color: var(--text); cursor: pointer; font: inherit; }
 .game-actions button { padding: 0.55rem 0.9rem; }
@@ -81,4 +89,6 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
   .site-nav a { padding: 0.75rem; }
   .hero { padding-top: 5rem; }
   .touch-controls { display: block; }
+  .fun-comic ol { grid-template-columns: repeat(2, 1fr); }
+  .games-grid { grid-template-columns: 1fr; }
 }
