@@ -54,7 +54,21 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
 
 .section { border-top: 1px solid var(--border); padding: 5rem 0; }
 .section > p:last-child { max-width: 560px; font-size: 1.05rem; }
-.game-placeholder { display: grid; min-height: 220px; place-items: center; margin-top: 2rem; border: 1px dashed var(--border); border-radius: 1rem; background: var(--surface); color: var(--muted); }
+.game-shell { margin-top: 2rem; max-width: 720px; padding: 1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); }
+.game-header, .score-board, .game-actions { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.game-header p { margin: 0 0 1rem; color: var(--muted); }
+.score-board { justify-content: flex-end; margin: 0; }
+.score-board span { display: grid; gap: 0.1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.score-board strong { color: var(--accent); font-size: 1.1rem; letter-spacing: 0; }
+#snake-canvas { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 0.5rem; background: #0a0c10; image-rendering: pixelated; }
+.game-actions { justify-content: flex-start; margin-top: 1rem; }
+.game-actions button, .touch-controls button { border: 1px solid var(--border); border-radius: 0.5rem; background: #1c2330; color: var(--text); cursor: pointer; font: inherit; }
+.game-actions button { padding: 0.55rem 0.9rem; }
+.game-actions button:hover:not(:disabled), .game-actions button:focus-visible, .touch-controls button:hover, .touch-controls button:focus-visible { border-color: var(--accent); color: var(--accent); }
+.game-actions button:disabled { cursor: not-allowed; opacity: 0.45; }
+.touch-controls { display: none; margin-top: 1rem; text-align: center; }
+.touch-controls button { width: 3rem; height: 2.75rem; margin: 0.15rem; font-size: 1.25rem; touch-action: manipulation; }
+.game-help { margin: 1rem 0 0; color: var(--muted); font-size: 0.9rem; }
 .site-footer { border-top: 1px solid var(--border); color: var(--muted); padding: 1.5rem 0 2rem; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
@@ -66,4 +80,5 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: 0.75rem; }
   .hero { padding-top: 5rem; }
+  .touch-controls { display: block; }
 }
