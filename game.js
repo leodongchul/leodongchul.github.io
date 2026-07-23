@@ -206,13 +206,15 @@
     const inset = cellSize * radius;
     context.fillStyle = color;
     context.beginPath();
-    context.roundRect(
-      position.x * cellSize + inset,
-      position.y * cellSize + inset,
-      cellSize - inset * 2,
-      cellSize - inset * 2,
-      cellSize * 0.16,
-    );
+    const x = position.x * cellSize + inset;
+    const y = position.y * cellSize + inset;
+    const width = cellSize - inset * 2;
+    const height = cellSize - inset * 2;
+    if (typeof context.roundRect === 'function') {
+      context.roundRect(x, y, width, height, cellSize * 0.16);
+    } else {
+      context.rect(x, y, width, height);
+    }
     context.fill();
   }
 
